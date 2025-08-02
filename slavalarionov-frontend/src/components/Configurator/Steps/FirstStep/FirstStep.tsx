@@ -50,15 +50,17 @@ const FirstStep: FC<FirstStepType> = ({
                 ))}
             </div>
             <div className={styles.colorsList}>
-                {products[selectedProductState.selectedProduct]?.frame_colors.map((color) => (
-                    <ColorButton
-                        key={color.color_code}
-                        colorHex={color.color_code}
-                        label={color.color_title}
-                        onClick={() => selectedColorState.setSelectedColor(color.color_code)}
-                        selected={color.color_code === selectedColorState.selectedColor}
-                    />
-                ))}
+                {selectedProductState.selectedProduct &&
+                    products[selectedProductState.selectedProduct]?.frame_colors.map((color) => (
+                        <ColorButton
+                            key={color.color_code}
+                            colorHex={color.color_code}
+                            label={color.color_title}
+                            onClick={() => selectedColorState.setSelectedColor(color.color_code)}
+                            selected={color.color_code === selectedColorState.selectedColor}
+                        />
+                    ))
+                }
             </div>
         </div>
     );

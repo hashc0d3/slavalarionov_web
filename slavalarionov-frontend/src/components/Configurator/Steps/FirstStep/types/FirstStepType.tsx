@@ -2,8 +2,8 @@ import type {Dispatch, SetStateAction} from "react";
 
 export interface FirstStepType {
     selectedProductState: {
-        selectedProduct: number
-        setSelectedProduct: Dispatch<SetStateAction<number>>
+        selectedProduct: number | undefined
+        setSelectedProduct: Dispatch<SetStateAction<number | undefined>>
     },
     selectedColorState: {
         selectedColor: string | undefined

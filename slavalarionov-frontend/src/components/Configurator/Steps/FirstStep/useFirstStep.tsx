@@ -1,7 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import type { WatchModelDetailedDto } from "../../../../types/WatchModelsDto.ts";
 import { getWatchModels } from "../../../../api/getWatchModels.ts";
-import { useEffect } from "react";
 import type { FirstStepType } from "@components/Configurator/Steps/FirstStep/types/FirstStepType.tsx";
 
 const useFirstStep = ({
@@ -10,15 +9,12 @@ const useFirstStep = ({
   selectedSizeState
 }: FirstStepType) => {
 
+    console.log(selectedProductState.selectedProduct, selectedColorState.selectedColor, selectedSizeState.selectedSize)
+
     const { data: products, isLoading } = useQuery<WatchModelDetailedDto[]>({
         queryKey: ['watch-models'],
         queryFn: getWatchModels,
     });
-
-    useEffect(() => {
-        selectedColorState?.setSelectedColor?.(undefined);
-        selectedSizeState?.setSelectedSize?.(undefined);
-    }, [selectedProductState?.selectedProduct]);
 
     return {
         products,
