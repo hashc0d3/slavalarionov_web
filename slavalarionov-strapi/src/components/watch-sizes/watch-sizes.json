@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_watch_sizes_watch_sizes",
+  "info": {
+    "displayName": "watch_sizes"
+  },
+  "options": {},
+  "attributes": {
+    "watch_size": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

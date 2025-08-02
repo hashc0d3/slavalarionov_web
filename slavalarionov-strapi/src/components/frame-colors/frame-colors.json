@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_frame_colors_frame_colors",
+  "info": {
+    "displayName": "frame_colors"
+  },
+  "options": {},
+  "attributes": {
+    "color_name": {
+      "type": "string"
+    },
+    "color_code": {
+      "type": "string"
+    },
+    "color_title": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

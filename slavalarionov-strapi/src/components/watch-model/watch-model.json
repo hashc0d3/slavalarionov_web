@@ -1,0 +1,39 @@
+{
+  "collectionName": "components_watch_model_watch_models",
+  "info": {
+    "displayName": "watch_model"
+  },
+  "options": {},
+  "attributes": {
+    "model_name": {
+      "type": "string"
+    },
+    "main_image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "watch_sizes": {
+      "type": "component",
+      "component": "watch-sizes.watch-sizes",
+      "repeatable": true
+    },
+    "watch_model_name": {
+      "type": "string"
+    },
+    "watch_model_manufacturer": {
+      "type": "string"
+    },
+    "frame_colors": {
+      "type": "component",
+      "component": "frame-colors.frame-colors",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

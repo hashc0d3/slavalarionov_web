@@ -1,0 +1,29 @@
+.colorWrapper {
+  display: flex;
+  align-items: center;
+  border: 1.5px solid transparent;
+  border-radius: 20px;
+  cursor: pointer;
+  padding: 8px 24px 8px 8px;
+  transition: background-color 0.3s, border-color 0.3s;
+  max-width: 200px;
+  background: #f7f7f7;
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.07);
+  }
+}
+
+.selected {
+  border-color: #1a466e;
+  background: #fff;
+}
+
+.color {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 16px;
+  border: none;
+  background: var(--color-hex, #ccc);
+}

@@ -1,0 +1,43 @@
+version: '3.8'
+
+services:
+  strapi:
+    build:
+      context: ./slavalarionov-strapi
+    container_name: slavalarionov-strapi
+    ports:
+      - "1337:1337"
+    volumes:
+      - ./slavalarionov-strapi/public/uploads:/app/public/uploads
+    restart: unless-stopped
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://localhost:1337/" ]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  backend:
+    build:
+      context: ./slavalarionov-backend
+    container_name: slavalarionov-backend
+    ports:
+      - "3000:3000"
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  frontend:
+    build:
+      context: ./slavalarionov-frontend
+    container_name: slavalarionov-frontend
+    ports:
+      - "5173:5173"
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5173/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3

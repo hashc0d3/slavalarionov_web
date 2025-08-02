@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "watch_models",
+  "info": {
+    "singularName": "watch-model",
+    "pluralName": "watch-models",
+    "displayName": "watch_model"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "watch_model": {
+      "type": "component",
+      "component": "watch-model.watch-model",
+      "repeatable": false
+    }
+  }
+}
