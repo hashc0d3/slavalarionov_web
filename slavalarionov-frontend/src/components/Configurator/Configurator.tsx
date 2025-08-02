@@ -1,6 +1,6 @@
 import { Steps } from 'primereact/steps';
 import { Dialog } from 'primereact/dialog';
-import {Button} from "primereact/button";
+import { Button } from "primereact/button";
 // Импортируйте компоненты шагов
 import FirstStep from '@components/Configurator/Steps/FirstStep/FirstStep.tsx';
 import SecondStep from '@components/Configurator/Steps/SecondStep/SecondStep.tsx';
@@ -9,20 +9,30 @@ import FourthStep from '@components/Configurator/Steps/FourthStep/FourthStep.tsx
 import useConfigurator from "@components/Configurator/useConfigurator.tsx";
 import style from './Configurator.module.scss';
 
-const steps = [
-    { label: 'Шаг 1', description: 'Описание шага 1', content: <FirstStep /> },
-    { label: 'Шаг 2', description: 'Описание шага 2', content: <SecondStep /> },
-    { label: 'Шаг 3', description: 'Описание шага 3', content: <ThirdStep /> },
-    { label: 'Шаг 4', description: 'Описание шага 4', content: <FourthStep /> },
-];
-
 const Configurator = () => {
 
     const {
         step,
         dialog,
-        handleContinueClick
+        handleContinueClick,
+        // Стейты для первого шага
+        selectedProductState,
+        selectedColorState,
+        selectedSizeState
     } = useConfigurator();
+
+    const steps = [
+        {
+            content: <FirstStep
+                selectedProductState={selectedProductState}
+                selectedColorState={selectedColorState}
+                selectedSizeState={selectedSizeState}
+            />
+        },
+        { label: 'Шаг 2', description: 'Описание шага 2', content: <SecondStep /> },
+        { label: 'Шаг 3', description: 'Описание шага 3', content: <ThirdStep /> },
+        { label: 'Шаг 4', description: 'Описание шага 4', content: <FourthStep /> },
+    ];
 
     return (
         <div className={style.constructorBody}>

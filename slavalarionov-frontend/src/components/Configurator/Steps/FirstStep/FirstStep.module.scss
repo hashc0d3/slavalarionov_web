@@ -19,18 +19,14 @@
   margin-top: 1rem;
 }
 
-
 .card {
   padding: 2rem;
-  //width: 400px;
 
-  // Первый div внутри .card — для картинки
   > div:first-child {
     display: flex;
     height: 400px;
   }
 
-  // Второй div внутри .card — для текста и кнопок
   > div:last-child {
     text-align: center;
     > div:last-child {
@@ -43,4 +39,9 @@
 
 .selected {
   background: #f7f7f7;
+}
+
+.selectedColor {
+  background: #f7f7f7;
+  color: black;
 }
