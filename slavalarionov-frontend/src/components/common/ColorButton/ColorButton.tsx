@@ -15,7 +15,7 @@ const ColorButton: FC<ColorButtonProps> = ({ colorHex, label, onClick, selected 
     >
         <span
             className={styles.color}
-            style={{ '--color-hex': selected ? '#C4C4C4' : colorHex } as React.CSSProperties}
+            style={{ '--color-hex': colorHex } as React.CSSProperties}
         />
         <span style={{ fontSize: 18 }}>{label}</span>
     </div>

@@ -2,10 +2,10 @@ import { Steps } from 'primereact/steps';
 import { Dialog } from 'primereact/dialog';
 import {Button} from "primereact/button";
 // Импортируйте компоненты шагов
-import FirstStep from './steps/FirstStep/FirstStep.tsx';
-import SecondStep from './steps/SecondStep/SecondStep.tsx';
-import ThirdStep from './steps/ThirdStep/ThirdStep.tsx';
-import FourthStep from './steps/FourthStep/FourthStep.tsx';
+import FirstStep from '@components/Configurator/Steps/FirstStep/FirstStep.tsx';
+import SecondStep from '@components/Configurator/Steps/SecondStep/SecondStep.tsx';
+import ThirdStep from '@components/Configurator/Steps/ThirdStep/ThirdStep.tsx';
+import FourthStep from '@components/Configurator/Steps/FourthStep/FourthStep.tsx';
 import useConfigurator from "@components/Configurator/useConfigurator.tsx";
 import style from './Configurator.module.scss';
 
